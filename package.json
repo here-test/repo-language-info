@@ -1,0 +1,44 @@
+{
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.9",
+    "eslint": "^4.16.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-vue": "^4.2.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "sprintf-js": "^1.1.1",
+    "style-loader": "^0.20.1",
+    "vue": "^2.2.6",
+    "vue-cli": "^2.8.2",
+    "vue-loader": "^13.0.5",
+    "vue-resource": "^1.3.4",
+    "vue-router": "^2.7.0",
+    "vue-template-compiler": "^2.5.9",
+    "vuex": "^2.4.1",
+    "webpack": "^3.10"
+  },
+  "devDependencies": {
+    "jasmine": "^2.9.0",
+    "jasmine-core": "^2.9.1",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1"
+  },
+  "scripts": {
+    "prod": "ENV=prod ./node_modules/.bin/webpack --config ./webpack.config.js --colors --progress",
+    "dev": "ENV=dev ./node_modules/.bin/webpack --config ./webpack.config.js --colors --progress",
+    "watch": "yarn run dev --watch"
+  }
+}
