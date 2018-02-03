@@ -1,11 +1,26 @@
-.loader {
-    background: url('./img/loader.gif');
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.content {
+    position: relative;
+
+    .loader-wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 500px;
+
+        .loader-image {
+            background: url('./img/loader.gif');
+            width: 128px;
+            height: 128px;
+        }
+    }
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }

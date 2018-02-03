@@ -3,7 +3,9 @@
         <div :class="hideOnLoad(!isLoading)">
             <slot></slot>
         </div>
-        <div :class="'loader' + hideOnLoad(isLoading)"></div>
+        <div :class="'loader-wrapper' + hideOnLoad(isLoading)">
+            <div class="loader-image"></div>
+        </div>
     </div>
 </template>
 

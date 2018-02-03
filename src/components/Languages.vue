@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="content">
         <page-header>Languages used in </page-header>
         <div>
             <router-link :to="{name: 'repositories-list'}" :class="'button is-primary'">Back</router-link>

@@ -28,3 +28,23 @@ Now the page will be available in your browser on [http://localhost:8080](http:/
 ## Tests run
 
 `yarn run test`
+
+## Todo list
+- [x] Get data and display it in components
+- [x] Use Vue And VueX
+- [x] Use ES6
+- [x] Use Webpack
+- [x] ESLint implemented
+- [x] Babel implemented for code and tests
+- [ ] Make Karma to work (?)
+- [ ] Write proper tests
+
+Unfortunately, I never wrote tests for frontend applications. Used only Behat tests, so I couldn't make Karma work on my available time.
+
+Also I don't know what really to make here mobile friendly. I don't have any design and content to display is too simple and easy to display on any device.
+
+Anyway I included scalability meta header and also implemented Bulma only to make texts look a bit better. Not so much impact but still looks a bit better and it's not a production code :)
+
+
+
+

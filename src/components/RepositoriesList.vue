@@ -1,8 +1,7 @@
 <template>
-    <div>
+    <div class="content">
         <page-header>Repositories</page-header>
         <loader>
-            <h2>List</h2>
             <div class="repos-list">
                 <repository-entry
                     v-for="repository in repositories"
