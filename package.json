@@ -2,12 +2,17 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
     "autoprefixer": "^7.2.5",
+    "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "bulma": "^0.6.2",
     "clean-webpack-plugin": "^0.1.18",
     "css-loader": "^0.28.9",
     "eslint": "^4.16.0",
@@ -33,12 +38,16 @@
     "jasmine": "^2.9.0",
     "jasmine-core": "^2.9.1",
     "karma": "^2.0.0",
+    "karma-babel-preprocessor": "^8.0.0-beta.0",
     "karma-chrome-launcher": "^2.2.0",
-    "karma-jasmine": "^1.1.1"
+    "karma-jasmine": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "phantomjs-prebuilt": "^2.1.16"
   },
   "scripts": {
     "prod": "ENV=prod ./node_modules/.bin/webpack --config ./webpack.config.js --colors --progress",
     "dev": "ENV=dev ./node_modules/.bin/webpack --config ./webpack.config.js --colors --progress",
-    "watch": "yarn run dev --watch"
+    "watch": "yarn run dev --watch",
+    "test": "./node_modules/.bin/karma start ./karma.conf.js"
   }
 }

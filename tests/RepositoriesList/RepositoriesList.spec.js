@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import RepositoriesList from '../../src/components/RepositoriesList.vue'
+import Vue from 'vue';
+import RepositoriesList from '../../src/components/RepositoriesList.vue';
 
 describe('RepositoriesList', () => {
     // Inspect the raw component options
     it('has a created hook', () => {
         expect(typeof RepositoriesList.created).toBe('function')
-    })
+    });
     //
     // // Evaluate the results of functions in
     // // the raw component options
@@ -13,7 +13,7 @@ describe('RepositoriesList', () => {
         expect(typeof RepositoriesList.data).toBe('function');
         const defaultData = RepositoriesList.data();
         expect(defaultData.rawRepositories).toBe([])
-    })
+    });
 
     // Inspect the component instance on mount
     // it('correctly sets the message when created', () => {
@@ -26,5 +26,5 @@ describe('RepositoriesList', () => {
         const Constructor = Vue.extend(RepositoriesList);
         const vm = new Constructor().$mount();
         expect(vm.$el.textContent).toBe('Repositories')
-    })
+    });
 });

@@ -10,6 +10,9 @@ module.exports = {
             './src/index.js',
             './src/app.scss',
         ],
+        vendor: [
+            'bulma',
+        ],
     },
     output: {
         publicPath: "/dist/",
@@ -35,7 +38,7 @@ module.exports = {
                 loader: "babel-loader",
             },
             {
-                test: /\.scss$/,
+                test: /\.s[ac]ss$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader', 'sass-loader'],
                     fallback: 'style-loader'

@@ -1,22 +1,29 @@
 <template>
     <div>
         <page-header>Repositories</page-header>
-        <div class="repos-list">
-            <repository-entry
-                v-for="repository in repositories"
-                :repository="repository"
-                :key="repository.id"
-            > </repository-entry>
-        </div>
+        <loader>
+            <h2>List</h2>
+            <div class="repos-list">
+                <repository-entry
+                    v-for="repository in repositories"
+                    :repository="repository"
+                    :key="repository.id"
+                > </repository-entry>
+            </div>
+        </loader>
     </div>
 </template>
 
 <script>
     import RepositoryEntry from './RepositoriesList/RepositoryEntry.vue';
     import PageHeader from "./common/PageHeader.vue";
+    import Loader from "./common/Loader.vue";
+
+    import api from '../api/repositories';
 
     export default {
         components: {
+            'loader': Loader,
             'page-header': PageHeader,
             'repository-entry': RepositoryEntry,
         },
@@ -27,21 +34,18 @@
         },
         computed: {
             repositories: function () {
-                return this.rawRepositories.map(function (repository) {
+                return this.$store.state.repositories.map(function (repository) {
                     return {
                         name: repository.name,
                         id: repository.id,
-                        route: '/something',
                     };
                 });
             }
         },
-        mounted() {
-            this.$http.get('https://api.github.com/users/heremaps/repos').then(response => {
-                this.rawRepositories = response.body;
-            }, response => {
-                console.log('Repositories list loading error');
-            });
+        mounted () {
+            api.getRepositories().then((response) => {
+                this.$store.dispatch('setRepositories', response.body);
+            })
         }
     };
 </script>
